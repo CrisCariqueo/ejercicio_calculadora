@@ -1,49 +1,80 @@
-# Ejercicio 1 - Calculadora Modular (Base del proyecto)
+# Ejercicio 1: Calculadora Modular
 
-Este repositorio es una plantilla para practicar flujo de trabajo con Git (ramas, merges, conflictos y release).
+Guia practica para trabajar Git con ramas, merges, conflictos y release.
 
-## Objetivo
+## 1) Objetivo
 
-Construir una calculadora modular en Java trabajando con ramas `feature/*` sobre `develop`, integrando una rama `release/1.0` y publicando la version final en `main` con tag `v1.0`.
-
-## Punto de partida
-
-- Proyecto Java base en `src/Main.java`.
-- El codigo inicial **no resuelve el ejercicio**; solo deja la estructura para que el equipo lo complete.
-- El conflicto intencional debe producirse en el bloque `switch` de `Main.java`.
-
-## Ramas obligatorias
+Construir una calculadora modular en Java y practicar un flujo de trabajo ordenado con:
 
 - `main`
 - `develop`
 - 3 ramas `feature/*`
 - 1 rama `release/1.0`
 
-Ejemplo de nombres validos para features:
+Al finalizar, la version estable debe quedar publicada en `main` con el tag `v1.0`.
 
+## 2) Requisitos previos
+
+- Tener este repositorio clonado.
+- Tener Git instalado y configurado.
+- Saber crear ramas, hacer commits y resolver conflictos.
+
+## 3) Consigna del ejercicio
+
+Debes completar la logica de la calculadora a partir de `src/Main.java`.
+
+### Que si debes hacer
+
+- Implementar funcionalidades usando ramas `feature/*`.
+- Integrar todo en `develop`.
+- Abrir una rama `release/1.0` para cierre de version.
+- Publicar version final en `main` y crear tag `v1.0`.
+
+### Que no debes hacer
+
+- No mergear ninguna `feature/*` directo a `main`.
+- No saltear la rama `release/1.0`.
+- No usar mensajes de commit genericos.
+
+## 4) Ramas obligatorias
+
+Minimo esperado en el historial:
+
+- `main`
+- `develop`
 - `feature/suma-resta`
 - `feature/multiplicacion-division`
 - `feature/menu-validaciones`
+- `release/1.0`
 
-## Flujo obligatorio
+Puedes usar otros nombres en `feature/*`, pero deben ser claros y consistentes.
+
+## 5) Flujo de trabajo (paso a paso)
 
 1. Crear `develop` desde `main`.
 2. Crear cada `feature/*` desde `develop`.
-3. Mergear cada `feature/*` a `develop` (nunca directo a `main`).
-4. Crear `release/1.0` desde `develop`.
-5. Mergear `release/1.0` a `main`.
-6. Crear tag `v1.0` sobre `main`.
-7. Mergear `release/1.0` de regreso a `develop`.
+3. Desarrollar y committear en cada `feature/*`.
+4. Mergear cada `feature/*` a `develop`.
+5. Crear `release/1.0` desde `develop`.
+6. Ajustar detalles finales en `release/1.0`.
+7. Mergear `release/1.0` a `main`.
+8. Crear el tag `v1.0` en `main`.
+9. Mergear `release/1.0` de regreso a `develop`.
 
-## Conflicto intencional (obligatorio)
+## 6) Conflicto intencional (obligatorio)
 
-Durante el trabajo en features, al menos dos ramas deben editar las mismas lineas del `switch` en `Main.java` para forzar un conflicto real de merge.
+El conflicto debe ocurrir en el bloque `switch` de `src/Main.java`.
 
-No se evalua evitar el conflicto; se evalua **resolverlo correctamente**.
+Para cumplir este punto:
 
-## Convencion de commits (obligatoria)
+- Al menos dos ramas `feature/*` deben modificar las mismas lineas del `switch`.
+- Debe quedar registro de la resolucion del conflicto en el historial.
 
-Formato:
+Importante: no se evalua evitar el conflicto, se evalua resolverlo bien.
+
+## 7) Convencion de commits (obligatoria)
+
+Formato obligatorio:
 
 `<tipo>(<scope>): <descripcion en imperativo>`
 
@@ -56,32 +87,42 @@ Tipos permitidos:
 - `test`
 - `chore`
 
-Ejemplos:
+### Ejemplos validos
 
-- `feat(calculadora): agregar opcion de suma en el menu`
+- `feat(calculadora): agregar opcion de suma`
 - `fix(calculadora): corregir validacion de division por cero`
-- `docs(readme): detallar flujo de release`
+- `docs(readme): aclarar flujo de release`
 
-Reglas:
+### Ejemplos invalidos
 
-- No usar mensajes vagos como `update`, `cambios`, `arreglo`.
-- Un commit debe representar un cambio logico concreto.
-- Mantener consistencia de idioma y estilo.
+- `update`
+- `cambios varios`
+- `arreglo`
 
-## Criterios de evaluacion del historial
+## 8) Errores que invalidan la entrega
 
-- Se respetan las ramas requeridas.
-- No hay merges de `feature/*` directos a `main`.
-- Existe evidencia del conflicto y su resolucion en el historial.
-- El release pasa por `release/1.0`.
-- Existe tag `v1.0` en la version final.
-- Commits cumplen la convencion obligatoria.
+- Mergear `feature/*` directo a `main`.
+- No crear `release/1.0`.
+- No crear el tag `v1.0`.
+- No evidenciar conflicto/resolucion en el `switch`.
+- Commits fuera de convencion.
 
-## Entregable
+## 9) Entregable
 
-URL del fork con historial limpio y completo.
+URL del fork en GitHub con historial limpio y completo.
 
-## Comandos utiles de verificacion
+## 10) Checklist de autoevaluacion
+
+Antes de entregar, verifica:
+
+- Estan todas las ramas obligatorias.
+- No hay features mergeadas directo a `main`.
+- Existe `release/1.0` y se mergeo correctamente.
+- Existe tag `v1.0` en `main`.
+- Se produjo y resolvio conflicto en `src/Main.java`.
+- Todos los commits cumplen formato obligatorio.
+
+Comandos utiles:
 
 ```bash
 git log --graph --oneline --decorate --all
