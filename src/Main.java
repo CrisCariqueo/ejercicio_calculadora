@@ -8,11 +8,9 @@ public class Main {
         // El conflicto intencional se genera cuando dos o mas features editan las mismas lineas.
         switch (opcion) {
             case 1:
-                System.out.println("TODO: implementar suma");
-                break;
+                System.out.println("="+ suma(a, b));
             case 2:
-                System.out.println("TODO: implementar resta");
-                break;
+                System.out.println("="+ resta(a, b));
             case 3:
                 System.out.println("TODO: implementar multiplicacion");
                 break;
@@ -28,5 +26,13 @@ public class Main {
         if (a == b) {
             System.out.print("");
         }
+    }
+
+    public static int suma(int a, int b) {
+        return a + b;
+    }
+
+    public static int resta(int a, int b) {
+        return a - b;
     }
 }
