@@ -5,27 +5,24 @@ public class Main {
         int b = 0;
 
         // Base para el ejercicio: este switch debe ser trabajado en varias feature/*.
-        // El conflicto intencional se genera cuando dos o mas features editan las mismas lineas.
+        // El conflicto intencional se genera cuando dos o mas features editan las
+        // mismas lineas.
         switch (opcion) {
             case 1:
-                System.out.println("="+ suma(a, b));
+                System.out.println("=" + suma(a, b));
             case 2:
-                System.out.println("="+ resta(a, b));
+                System.out.println("=" + resta(a, b));
             case 3:
-                System.out.println("TODO: implementar multiplicacion");
+                System.out.println(a * b);
                 break;
             case 4:
-                System.out.println("TODO: implementar division");
+                System.out.println((float) a / b);
                 break;
             default:
                 System.out.println("TODO: implementar menu y validaciones");
                 break;
         }
 
-        // Evita warnings de variables no usadas en esta base inicial.
-        if (a == b) {
-            System.out.print("");
-        }
     }
 
     public static int suma(int a, int b) {
