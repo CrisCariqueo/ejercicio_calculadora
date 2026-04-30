@@ -13,10 +13,10 @@ public class Main {
             case 2:
                 System.out.println("=" + resta(a, b));
             case 3:
-                System.out.println(a * b);
+                System.out.println("=" + multiplicacion(a, b));
                 break;
             case 4:
-                System.out.println((float) a / b);
+                System.out.println("=" + division(a, b));
                 break;
             default:
                 System.out.println("TODO: implementar menu y validaciones");
@@ -31,5 +31,13 @@ public class Main {
 
     public static int resta(int a, int b) {
         return a - b;
+    }
+
+    public static int multiplicacion(int a, int b) {
+        return a * b;
+    }
+
+    public static float division(int a, int b) {
+        return (float) a / b;
     }
 }
