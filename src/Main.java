@@ -14,19 +14,19 @@ public class Main {
             switch (opcion) {
                 case 1:
                     opcion = 0;
-                    System.out.println("=" + suma(a, b));
+                    System.out.println("= " + suma(a, b));
                     break;
                 case 2:
                     opcion = 0;
-                    System.out.println("=" + resta(a, b));
+                    System.out.println("= " + resta(a, b));
                     break;
                 case 3:
                     opcion = 0;
-                    System.out.println(a * b);
+                    System.out.println("= "+ a * b);
                     break;
                 case 4:
                     opcion = 0;
-                    System.out.println((float) a / b);
+                    System.out.println("= "+ (float) a / b);
                     break;
                 default:
                     System.out.println("1:+  2:-  3:*  4:/");
